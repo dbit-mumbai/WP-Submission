@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+		div.bgcolor
+			{
+			background-color:powderblue;
+			text-align:center;
+			}
+		.border1
+			{
+			border:6px solid black;
+			width:100%;
+			}
+		input[type=text], select 
+		{
+			width: 30%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+		}
+
+		input[type=submit] 
+		{
+			width: 30%;
+			background-color: #4CAF50;
+			color: white;
+			padding: 14px 20px;
+			margin: 10px 180px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+
+		input[type=submit]:hover 
+		{
+			background-color: #45a049;
+		}
+
+		.div1
+		{
+			border-radius: 5px;
+			background-color: #f2f2f2;
+			padding: 20px;
+		}
+		label
+		{
+			margin-top:15px;
+			font-size:20;
+		}
+		
+		
+	</style>
+	<script>
+		function validateForm() 
+		{
+    	var x = document.forms["AddPage"]["studindustry"].value;
+    	if (x == "") 
+    		{
+     	   alert("Entering the Industry Name is required");
+     	   return false;
+    		}
+    	
+    	var y = document.forms["AddPage"]["studdesign"].value;
+    	if (y == "") 
+    		{
+     	   document.getElementById("studdesigninput").innerHTML="ALERT :- ENTERING THE JOB DESIGNATION IS REQUIRED";
+     	   return false;
+     		}
+     	 
+     	 var z,text;
+     	  z= document.getElementById("studpackage").value;
+    		
+    		if (isNaN(z)|| z<=0)
+    		{
+    			text="Alert :- Input here should be a Valid Package Salary Only!";
+    			document.getElementById("studpackageinput").innerHTML = text;
+    			return false;
+    		}
+
+    	var abc = document.forms["AddPage"]["studname"].value;
+    	if (abc == "") 
+    		{
+     	   alert("Entering the Student Name is required");
+     	   return false;
+    		}
+    	var m = document.forms["AddPage"]["studdept"].value;
+    	if (m == "") 
+    		{
+     	   alert("Entering the Dept. Of Student is required");
+     	   return false;
+    		}
+		}
+	</script>
+
+	<title>
+		TPO - Add Page
+	</title>
+</head>
+
+<body>
+	<div class="bgcolor">
+	<img src = "banner.png" class="border1"/>
+	<h1 align="center"> ~For TPO Officer Only~</h1>
+	<h3 align="center"> Please enter the placement details of the students!</h3>
+	<div class="div1">
+		<form action="#" name="AddPage" onsubmit="return validateForm()" method="post">
+			
+
+			<label for="industry">Industry Name</label>
+			<input type="text" id="studindustry" name="industry"><br>
+			
+
+
+			<label for="jobdesig">Job Designation</label>
+			<input type="text" id="studdesign" name="jobdesig"><br><br>
+			<p id="studdesigninput"></p>
+			
+
+			<label for="package">Package</label>
+			<input type="number" id="studpackage" name="package"><br><br>
+			<p id ="studpackageinput"></p>
+			
+
+			<label for="studname">Student Name</label>
+			<input type="text" id="studname" name="studname"><br>
+
+			
+
+			<label for="dept">Dept. Of Student</label>
+			<select id="studdept" name="dept">
+			<option value=""></option>
+			<option value="comps">Computer Science</option>
+			<option value="it">Information Technology</option>
+			<option value="mech">Mechanical</option>
+			<option value="extc">Electronics and Telecomm.</option>
+			</select><br>
+  
+			
+
+			<input type="submit" value="Submit">
+		
+		</form>
+	</div>
+	</div>
+</body>
+</html>

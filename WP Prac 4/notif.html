@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+		div.bgcolor
+			{
+			background-color:powderblue;
+			text-align:center;
+			}
+		.border1
+			{
+			border:6px solid black;
+			width:100%;
+			}
+		input[type=date] 
+			{
+			width: 15%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			box-sizing:border-box;
+			border: 1px solid #555;
+			outline: none;
+			height:6px;
+			}
+
+		input[type=date]:focus 
+			{
+			background-color: lightblue;
+			}
+		input[type=submit] 
+		{
+			width: 20%;
+			background-color: #4CAF50;
+			color: white;
+			padding: 14px 20px;
+			margin: 10px 180px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+
+		input[type=submit]:hover 
+		{
+			background-color: #45a049;
+		}
+		.div1
+		{
+			border-radius: 5px;
+			background-color: #f2f2f2;
+			padding: 20px;
+		}
+		#addn
+		{
+			width:60%;
+		}
+		
+	</style>
+
+		<title>
+			TPO - Notif Page
+		</title>
+</head>
+
+<body>
+	<div class="bgcolor">
+	<img src = "banner.png" class="border1"/>
+	<h1 align="center"> ~For Industries Only~</h1>
+	<h3 align="center"> Please enter the requirement details of the job!</h3>
+	<div class="div1">
+		<form action="#">
+			<label for="date">Date</label><br>
+			<input type="date" id="date" name="date"><br><br><br>
+			
+			<label for="industry">Industry Name</label><br>
+			<input type="text" id="jobindustry" name="industry"><br><br><br>
+			
+			<label for="jobdesig">Job Designation</label><br>
+			<input type="text" id="studdesign" name="jobdesig"><br><br><br>
+			
+			<label for="package">Package</label><br>
+			<input type="number" id="jobpackage" name="package"><br><br><br>
+			
+			<label for="jobbranch">Branches Eligible</label><br>
+			<input type="checkbox" checked="checked" value="jobit"> IT<br>
+			<input type="checkbox" value="jobcomps"> Comps<br>
+			<input type="checkbox" value="jobmech"> Mech<br>
+			<input type="checkbox" value="jobextc"> Extc<br><br><br>
+			
+			<label for="cutoffgpa">Cut-off CGPA</label><br>
+			<input type="number" id="cutoffgpa" name="cutoffgpa"><br><br>
+			
+			
+			<label for="jobadditional">Additional Criteria</label><br>
+			<input id="addn" type="text" id="jobadditional" name="jobadditional"><br><br>
+			
+			<input type="submit" value="Submit">
+		</form>
+	</div>
+	</div>
+</body>
+</html>
